@@ -57,8 +57,9 @@ def init_dir(args):
 	args.predict_file = args.data_dir + 'prediction.txt'
 
 def base_dir(args):
-	return 'data/' + args.dataset + '/' if sys.platform == 'darwin' else \
-		'/shared/data/' + getpass.getuser() + '/DEC/' + args.dataset + '/'
+    return './data/' + args.dataset + '/'
+	# return 'data/' + args.dataset + '/' if sys.platform == 'darwin' else \
+		# '/shared/data/' + getpass.getuser() + '/DEC/' + args.dataset + '/'
 
 
 args = parse_args()

@@ -1,7 +1,9 @@
 from __future__ import print_function
 
-from predictor import *
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning) 
 
+from predictor import *
 
 def parse_args():
 	parser = argparse.ArgumentParser()
@@ -17,6 +19,7 @@ def parse_args():
 	parser.add_argument('--pre_step', type=list, default=[10], help=None)
 	parser.add_argument('--epoch', type=list, default=[30], help=None)
 	parser.add_argument('--step', type=list, default=[30], help=None)
+	parser.add_argument('--dataset', type=str, default='cora', help=None)
 	return parser.parse_args()
 
 
